@@ -10,3 +10,10 @@ function getmessage(message){
 	}
 	return Promise.resolve({msg: "hi"})
 }
+
+if(document.querySelector("video") !== null ){
+	console.log("I have video element.")
+	browser.runtime.sendMessage({msg: "subscribe"})
+}else{
+	console.log("I don't have video element.")
+}

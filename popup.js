@@ -19,5 +19,3 @@ function sendAll(obj){
 
 document.getElementById("play-button").addEventListener("click",sendPlay)
 document.getElementById("pause-button").addEventListener("click",sendPause)
-
-sendPause();
