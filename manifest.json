@@ -21,6 +21,9 @@
   "browser_action": {
     "default_title": "Media Hub",
     "default_popup": "popup.html"
-  }
+  },
 
+  "background": {
+	  "scripts": ["background.js"]
+  }
 }
