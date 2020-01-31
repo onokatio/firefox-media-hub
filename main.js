@@ -1,4 +1,9 @@
 console.log("start media hub")
+browser.tabs.getCurrent().then( (tab) => {
+	console.log("tabid:" + tab.id)
+}, (error) => {
+	console.log("error": + error)
+})
 
 browser.runtime.onMessage.addListener(getmessage)
 function getmessage(message){
@@ -16,4 +21,5 @@ if(document.querySelector("video") !== null ){
 	browser.runtime.sendMessage({msg: "subscribe"})
 }else{
 	console.log("I don't have video element.")
+	browser.runtime.sendMessage({msg: "subscribe false"})
 }
